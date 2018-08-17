@@ -1,0 +1,43 @@
+<!--pages/movie/moie.wxml-->
+<view class="search">
+   <input placeholder="输入您要找的影片名" bindtap='searchMovie'/>
+</view>
+<view class="content">
+  <view class="content-list">
+    <view class="content-list_title">
+      <text>正在热映</text><text class="more">更多 ></text>
+    </view>
+    <scroll-view class="scroll-view_H content-list_items" scroll-x style="width: 100%">
+      <view class="scroll-view-item_H content-list_item" wx:for="{{showingLists}}" wx:key="{{index}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.name}}</text>
+        <text>豆瓣评分 {{item.grade}}</text>
+      </view> 
+    </scroll-view>
+  </view>
+  <view class="content-list">
+    <view class="content-list_title">
+      <text>即将上映</text><text class="more">更多 ></text>
+    </view>
+    <scroll-view class="scroll-view_H content-list_items" scroll-x style="width: 100%">
+      <view class="scroll-view-item_H content-list_item" wx:for="{{willShowLists}}" wx:key="{{index}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.name}}</text>
+        <text>{{item.type}}</text>
+        <text>{{item.date}}</text>
+      </view> 
+    </scroll-view>
+  </view>
+  <view class="content-list">
+    <view class="content-list_title">
+      <text>豆瓣TOP</text><text class="more">更多 ></text>
+    </view>
+    <scroll-view class="scroll-view_H content-list_items" scroll-x style="width: 100%">
+      <view class="scroll-view-item_H content-list_item" wx:for="{{topShowLists}}" wx:key="{{index}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.name}}</text>
+        <text>{{item.type}}</text>
+      </view> 
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/news/news.wxml-->
+<view class="content">
+  <view class="content-left">
+    <text bindtap='bindTap' wx:for="{{newsNameLists}}" wx:key="{{index}}" class="{{activeIndex == index?'active':''}}" data-index="{{index}}">{{item.name}}</text>
+  </view>
+  <view class="content-right">
+    <view class="content-right_list" wx:for="{{newsLists}}" wx:key="{{index}}">
+        <image src="{{item.thumbnail_pic_s}}"></image>
+        <view class="content-right_list_word">
+          <view class="content-right_list_memo">{{item.title}}</view>
+        <view class="content-right_list_source"><text>{{item.author_name}}</text><text>{{item.date}}</text></view>
+        </view>
+        
+    </view>
+  </view>
+</view>

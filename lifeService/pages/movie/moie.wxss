@@ -1,0 +1,57 @@
+/* pages/movie/moie.wxss */
+.search{
+   width:100%;
+   padding:10rpx 0;
+   height:auto;
+   background:#f8f8f8;
+}
+.search input{
+  width:80%;
+  height:40rpx;
+  display:block;
+  margin:0 auto;
+  border:1rpx solid #ccc;
+  border-radius:20rpx;
+  font-size:22rpx;
+  padding-left:20rpx;
+}
+.content-list{
+  border-bottom:10rpx solid #f8f8f8;
+  width:100%;
+  padding:20rpx 0;
+}
+.content-list .content-list_title{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  font-size:12px;
+  padding:10rpx 20rpx 20rpx;
+  border-bottom:1px solid #f2f2f2;
+}
+.content-list .content-list_title .more{
+  color:#00BFFF;
+}
+.content-list_items{
+  padding-top:20rpx;
+  /* display:flex; */
+  flex-direction: row;
+  white-space: nowrap; 
+  width:100%;
+}
+.content-list_items .content-list_item{
+  display: inline-block; 
+  padding:10rpx 15rpx;
+  width:25%;
+}
+.content-list_items .content-list_item image{
+  height:200rpx;
+  width:100%;
+}
+.content-list_items .content-list_item text{
+  display:block;
+  width:100%;
+  font-size:12px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}

@@ -1,0 +1,27 @@
+<!--pages/weather/weather.wxml-->
+<view class="banner">
+  <swiper indicator-dots="true"
+    autoplay="ture" interval="3000" duration="1000" circular="true">
+    <block wx:for="{{bannerUrl}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="content">
+  <view class="nowCity"><text>当前城市：{{location}}</text><text class="switchBtn" bindtap='switchCity'>切换当前城市</text></view>
+  <view class="nowWeather">
+  <view class="time">{{nowDate}}</view>
+    <text class="temper">{{tag.tmp}} ℃</text>
+    <view class="weather-memo">
+      <view class="weather-tag">
+         <text>{{tag.cond_txt}}</text><text>微风</text><text>湿度{{tag.hum}}</text><text>优</text>
+      </view>
+      <view class="weather-advice">{{dress.txt}}</view>
+    </view>
+  </view>
+  <view class="someDays">
+    <view class="someDays-list" wx:for="{{dateLists}}" wx:key="{{index}}"><text>{{item.date}}</text><text class="someDays-list-temper">{{item.tmp_min}}℃/ {{item.tmp_max}}℃ </text><text>{{item.cond_txt_d}}</text></view>
+  </view>
+</view>
